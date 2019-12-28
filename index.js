@@ -200,24 +200,13 @@ app.post('/login', async (req, res) => {
 
         
 
-        result.password = undefined;
+        
 
 
 
         console.log(result, result.password );
 
-        const token = jsonwebtoken.sign({
-
-           data: result,
-
-           role: 'User'
-
-        }, 'supersecretToken', { expiresIn: '7d' });
-
-        
-
-        res.send({ message: 'Successfully Logged in', token: token });
-
+       
       } 
 
       
